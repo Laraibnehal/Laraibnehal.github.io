@@ -1,0 +1,16 @@
+/* Importing google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Montserrat&family=Roboto:wght@300;400&display=swap');
+
+
+/* defining color and font scheme */
+:root{
+
+    --light: #FBFACD;
+    --grey: #DEBACE;
+    --purple: #BA94D1;
+    --dark: #7F669D;
+
+    --font-main: 'Montserrat';
+    --font-roboto: 'Roboto';
+    --font-Inter: 'Inter';
+}
