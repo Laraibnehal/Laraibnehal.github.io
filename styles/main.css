@@ -1,104 +1,122 @@
 /* Importing partials */
 @import "./partials.css";
 
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&family=Fira+Sans:ital,wght@1,300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,200;1,300&display=swap");
 * {
   margin: 0;
   padding: 0;
-}
-html {
+  box-sizing: border-box;
   scroll-behavior: smooth;
-}
-.container {
-  background-color: #f8f2f4d6;
+  font-family: var(--font-main);
 }
 
-.sidebar {
-  background-color: rgba(95, 83, 83, 0.9);
-  width: auto;
-  font-family: "Fira Sans", sans-serif;
-  
+body{
+  overflow-x: hidden;
 }
-.myname {
-  color: #f5e4e6;
-  margin: 0 24px;
-  padding: 11px;
+
+.container {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+.navbar{
+  background: var(--grey);
+  /*border-bottom: 2px solid var(--purple);*/
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5em 6em;  
+  position: fixed;
+  top: 0%;
+  width: 100vw;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
 }
-.myname img {
-  width: 49px;
-  height: 29px;
+
+.logo > h2 {
+  color: var(--dark);
+  font-size: 2em;
+  font-weight: 400;
 }
-.sidebar nav {
-  padding: 0px;
+
+.logo img {
+  width: 150px;
+  height: 150px;
 }
-.sidebar nav ul {
-  margin: 0;
-  padding: 0;
+
+.navbar nav ul {
   display: flex;
-  list-style: none;
-  
+  list-style: none;  
 }
-.sidebar nav li {
+
+.navbar > nav > ul > li > a {
   list-style: none;
-  font-size: 20px;
-  /* padding: 33px 0; */
-  flex-direction: row;
-  
-}
-.sidebar nav li a {
+  font-size: 1.1em;
+  margin-left: 15px;
+  color: var(--dark);
   text-decoration: none;
-  color: white;
+  padding: 10px 12px;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s;
 }
+
+.navbar > nav > ul > li > a:hover {
+  border-bottom: 1px solid var(--dark);
+}
+
+
+
+/* Intro section starts here */
+
 .main {
-  /* background-color: yellow; */
-  width: 90vw;
+  background-color: #f2f2f2;
+  width: 100vw;
+  padding: 2em 6em;
 }
+
 .infoContainer {
-  /* background-color: aquamarine; */
-  height: 65vh;
-  width: 80vw;
-  margin: 127px auto;
-  justify-content: space-around;
+  justify-content: space-between;
   display: flex;
+  align-items: flex-start;
+  margin-top: 7em;
 }
+
 .devinfo {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  width: 50%;
 }
 .hello {
-  font-size: 65px;
-  font-family: "Jost", sans-serif;
+  font-size: 4em;
 }
 .name {
-  font-size: 50px;
-  font-weight: bold;
-  font-family: "Fira Sans", sans-serif;
+  font-size: 4em;
+  color: var(--dark);
 }
 .about {
-  font-size: 30px;
-  font-family: "Jost", sans-serif;
+  font-size: 2.2em;
+  color: var(--dark);
 }
-.moreabout {
-  font-size: 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 16px;
+.moreabout, .moreabout > span {
+  font-size: 1.2em;
+  margin-top: 1.1em;
 }
 .buttons {
-  margin-top: 34px;
+  margin-top: 1.2em;
 }
 .btn {
-  margin: 10px;
+  margin-right: 15px;
   border-radius: 22px;
-  padding: 8px;
-  background-color: rgba(27, 26, 25, 0.285);
-  border: 2px solid black;
+  padding:  15px 25px;
   cursor: pointer;
-  color: rgb(5, 6, 3);
-  font-weight: bold;
-  font-size: 21px;
+  color: var(--light);
+  font-size: 1.2em;
+  outline: none;
+  border: 2px solid var(--dark);
+  background: var(--dark);
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+  transition: all 0.2s;
+}
+.btn-secondary{
+  background: #f2f2f2;
+  border: 2px solid var(--dark);
+  color: var(--dark);
 }
 .btn-sm {
   font-size: 14px;
@@ -110,7 +128,10 @@ button:hover {
   color: rgb(219, 205, 205);
 }
 .devpic img {
-  height: 65vh;
+  height: 80vh;
+  border-top-left-radius: 55px;
+  border-bottom-right-radius: 15px;
+  box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 /* education form  */
 .educationinfo {
